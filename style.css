@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  max-width: 80%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4); 
+  border-radius: 10px;
+}
+
+.scroll-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ffffffcc;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Animation for hero text (centered, absolute) */
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero-text.animate {
+  animation: heroFadeIn 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.logo{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e4e6; 
+  color: #4A90E2;
+  line-height: 1.6;
+  padding: 0px;
+}
+
+
+header {
+  background-color: #4A90E2; 
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.35s;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto;
+  color: #555;
+}
+
+.cta-button {
+  display: block;
+  background-color: #4A90E2;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 20px auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.cta-button:hover {
+  background-color: #2D74C4;
+}
+
+section {
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+ul {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.age-buttons {
+  margin-top: 20px;
+}
+
+.age-buttons button {
+  background-color: #4A90E2;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.age-buttons button:hover {
+  background-color: #2D74C4;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #4A90E2;
+}
+
+
+#faq h3 {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+footer{
+  text-align: center;
+  background-color: #E5EDF3;
+  color: #2C3E50;
+  padding: 20px;
+}
+footer a {
+  color: #4A90E2;
+  text-decoration: none;
+}
+
+.footer-content h2{
+  display: flex;
+  justify-content: space-around;
+                    
+}
+.footer-content ul{
+display: flex;
+  flex-direction: column;      
+  align-items: center;        
+  gap: 15px; 
+}
